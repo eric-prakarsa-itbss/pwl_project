@@ -12,7 +12,9 @@ class MahasiswaController extends Controller
      */
     public function index()
     {
-        return Mahasiswa::all();
+        return view('mahasiswa.index', [
+            'mahasiswa' => Mahasiswa::all()
+        ]);
     }
 
     /**
@@ -20,7 +22,7 @@ class MahasiswaController extends Controller
      */
     public function create()
     {
-        //
+        return view('mahasiswa.create', []);
     }
 
     /**
@@ -28,7 +30,11 @@ class MahasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        Mahasiswa::create('data');
+        $data = $request->except('_token');
+
+        Mahasiswa::create($data);
+
+        return redirect()->action([MahasiswaController::class, 'index']);
     }
 
     /**
