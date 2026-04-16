@@ -11,6 +11,8 @@ Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
 Route::get('/mahasiswa/{id}', [MahasiswaController::class, 'show']);
 Route::get('/mahasiswa-create', [MahasiswaController::class, 'create']);
 Route::post('/mahasiswa', [MahasiswaController::class, 'store'])->name('mahasiswa.save');
+Route::get('/mahasiswa-edit/{id}', [MahasiswaController::class, 'edit']);
+Route::put('/mahasiswa/{id}', [MahasiswaController::class, 'update'])->name('mahasiswa.edit');
 
 
 // Route::get      => Get Data     => R => select
