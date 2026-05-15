@@ -3,42 +3,37 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Create Mahasiswa</title>
+    <title>Create Matakuliah</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
-    <form action="{{ action([App\Http\Controllers\MahasiswaController::class, 'store'])}}"  method="post">
+    <form action="{{ action([App\Http\Controllers\MataKuliahController::class, 'store']) }}"  method="post">
         @csrf
         <table class="table table-dark table-striped-columns">
             <tr>
-                <td>Nama Lengkap</td>
+                <td>Jurusan</td>
                 <td>:</td>
-                <td><input type="text" name="Fullname"></td>
+                <td><input type="text" name="Jurusan_Id"></td>
             </tr>
             <tr>
-                <td>Nomor Induk Mahasiswa</td>
+                <td>Kode Mata Kuliah</td>
                 <td>:</td>
-                <td><input type="text" name="NIM"></td>
+                <td><input type="text" name="Kode_Mata_Kuliah"></td>
             </tr>
             <tr>
-                <td>Nomor Induk Siswa Nasional</td>
+                <td>Nama Mata Kuliah</td>
                 <td>:</td>
-                <td><input type="text" name="NIDN"></td>
+                <td><input type="text" name="Nama_Mata_Kuliah"></td>
             </tr>
             <tr>
-                <td>Tempat Lahir</td>
+                <td>SKS</td>
                 <td>:</td>
-                <td><input type="text" name="Tempat_Lahir"></td>
+                <td><input type="text" name="SKS"></td>
             </tr>
             <tr>
-                <td>Tanggal Lahir</td>
+                <td>Dosen Pengampu</td>
                 <td>:</td>
-                <td><input type="text" name="Tanggal_Lahir"></td>
-            </tr>
-            <tr>
-                <td>Alamat</td>
-                <td>:</td>
-                <td><textarea name="Alamat"></textarea></td>
+                <td><input type="text" name="Dosen_Id"></td>
             </tr>
             <tr>
                 <td colspan="3">

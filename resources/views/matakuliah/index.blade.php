@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mahasiswa</title>
+    <title>Matakuliah</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
@@ -27,10 +27,10 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{{ action([App\Http\Controllers\DosenController::class, 'index']) }}">Dosen</a></li>
-                <li><a class="dropdown-item active" href="{{ action([App\Http\Controllers\MahasiswaController::class, 'index']) }}">Mahasiswa</a></li>
+                <li><a class="dropdown-item" href="{{ action([App\Http\Controllers\MahasiswaController::class, 'index']) }}">Mahasiswa</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="{{ action([App\Http\Controllers\JurusanController::class, 'index']) }}">Jurusan</a></li>
-                <li><a class="dropdown-item" href="{{ action([App\Http\Controllers\MataKuliahController::class, 'index']) }}">Mata Kuliah</a></li>
+                <li><a class="dropdown-item active" href="{{ action([App\Http\Controllers\MataKuliahController::class, 'index']) }}">Mata Kuliah</a></li>
               </ul>
             </li>
             <!-- <li class="nav-item">
@@ -44,36 +44,34 @@
         </div>
       </div>
     </nav>
-    <a href={{ action([App\Http\Controllers\MahasiswaController::class, 'create'])}}>
+    <a href={{ action([App\Http\Controllers\MataKuliahController::class, 'create']) }}>
         <input type="button" value="Create">
     </a>
     <table class="table table-striped">
         <thead>
             <th>No</th>
-            <th>Nama Lengkap</th>
-            <th>NIM</th>
-            <th>NISN</th>
-            <th>Tempat Lahir</th>
-            <th>Tanggal Lahir</th>
-            <th>Alamat</th>
+            <th>Jurusan</th>
+            <th>Kode</th>
+            <th>Nama</th>
+            <th>SKS</th>
+            <th>Dosen Pengampu</th>
             <th>Tanggal Dibuat</th>
             <th>Aksi</th>
         </thead>
-        @foreach ($mahasiswa as $m)
+        @foreach ($matakuliah as $m)
         <tr>
             <td>{{$m->id}}</td>
-            <td>{{$m->Fullname}}</td>
-            <td>{{$m->NIM}}</td>
-            <td>{{$m->NIDN}}</td>
-            <td>{{$m->Tempat_Lahir}}</td>
-            <td>{{$m->Tanggal_Lahir}}</td>
-            <td>{{$m->Alamat}}</td>
+            <td>{{$m->Jurusan_Id}}</td>
+            <td>{{$m->Kode_Mata_Kuliah}}</td>
+            <td>{{$m->Nama_Mata_Kuliah}}</td>
+            <td>{{$m->SKS}}</td>
+            <td>{{$m->Dosen_Id}}</td>
             <td>{{$m->created_at}}</td>
             <td>
-                <a href={{ action([App\Http\Controllers\MahasiswaController::class, 'edit'], $m->id)}}>
+                <a href={{ action([App\Http\Controllers\MataKuliahController::class, 'edit'], $m->id)}}>
                     <input type="button" value="Edit">
                 </a>
-                <form action="{{ action([App\Http\Controllers\MahasiswaController::class, 'destroy'], $m->id)}}"  method="post">
+                <form action="{{ action([App\Http\Controllers\MataKuliahController::class, 'destroy'], $m->id)}}"  method="post">
                     @csrf
                     <input type="hidden" name="id" value="{{$m->id}}">
                     <input type="hidden" name="_method" value="DELETE">

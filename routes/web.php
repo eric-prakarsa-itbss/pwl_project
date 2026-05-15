@@ -1,19 +1,20 @@
 <?php
 
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\DosenController;
+use App\Http\Controllers\MataKuliahController;
+use App\Http\Controllers\JurusanController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
+Route::get('/', function () {
+    return view('dashboard');
+})->name('dashboard');
 
-Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
-Route::get('/mahasiswa/{id}', [MahasiswaController::class, 'show']);
-Route::get('/mahasiswa-create', [MahasiswaController::class, 'create'])->name('mahasiswa.add');
-Route::post('/mahasiswa', [MahasiswaController::class, 'store'])->name('mahasiswa.save');
-Route::get('/mahasiswa-edit/{id}', [MahasiswaController::class, 'edit'])->name('mahasiswa.update');;
-Route::put('/mahasiswa/{id}', [MahasiswaController::class, 'update'])->name('mahasiswa.edit');
-Route::delete('/mahasiswa/{id}', [MahasiswaController::class, 'destroy'])->name('mahasiswa.delete');
+Route::resource('/mahasiswa', MahasiswaController::class);
+Route::resource('/dosen', DosenController::class);
+Route::resource('/matakuliah', MataKuliahController::class);
+Route::resource('/jurusan', JurusanController::class);
+
 
 
 // Route::get      => Get Data     => R => select
