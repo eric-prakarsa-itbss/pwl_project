@@ -7,7 +7,7 @@ use App\Http\Controllers\JurusanController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('landing');
 })->name('dashboard');
 
 Route::resource('/mahasiswa', MahasiswaController::class);
