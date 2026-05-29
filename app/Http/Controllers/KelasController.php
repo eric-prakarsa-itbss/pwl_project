@@ -25,8 +25,11 @@ class KelasController extends Controller
      */
     public function create()
     {
-        return view('mahasiswa.create', [
-            'dosen' => Dosen::all()
+        return view('kelas.create', [
+            'dosen' => Dosen::get(),
+            'mataKuliah'=> MataKuliah::get(),
+            'hari' => Kelas::ListHari(),
+            'jam' => Kelas::ListJam(),
         ]);
     }
 
@@ -35,7 +38,11 @@ class KelasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->except('_token');
+
+        Kelas::create($data);
+
+        return redirect()->action([KelasController::class, 'index']);
     }
 
     /**

@@ -15,32 +15,32 @@
             <tr>
                 <td>Jurusan</td>
                 <td>:</td>
-                <td><input type="text" name="Jurusan_Id" value="{{$matakuliah->Jurusan_Id}}"></td>
+                <td><input type="text" name="Jurusan_Id" value="{{$matakuliah->Jurusan_Id}}" class="form-control"></td>
             </tr>
             <tr>
                 <td>Kode Mata Kuliah</td>
                 <td>:</td>
-                <td><input type="text" name="Kode_Mata_Kuliah" value="{{$matakuliah->Kode_Mata_Kuliah}}"></td>
+                <td><input type="text" name="Kode_Mata_Kuliah" value="{{$matakuliah->Kode_Mata_Kuliah}}" class="form-control"></td>
             </tr>
             <tr>
                 <td>Nama Mata Kuliah</td>
                 <td>:</td>
-                <td><input type="text" name="Nama_Mata_Kuliah" value="{{$matakuliah->Nama_Mata_Kuliah}}"></td>
+                <td><input type="text" name="Nama_Mata_Kuliah" value="{{$matakuliah->Nama_Mata_Kuliah}}" class="form-control"></td>
             </tr>
             <tr>
                 <td>SKS</td>
                 <td>:</td>
-                <td><input type="text" name="SKS" value="{{$matakuliah->SKS}}"></td>
+                <td><input type="text" name="SKS" value="{{$matakuliah->SKS}}" class="form-control"></td>
             </tr>
             <tr>
                 <td>Dosen Pengampu</td>
                 <td>:</td>
-                <td><input type="text" name="Dosen_Id" value="{{$matakuliah->Dosen_Id}}"></td>
+                <td><input type="text" name="Dosen_Id" value="{{$matakuliah->Dosen_Id}}" class="form-control"></td>
             </tr>
             <tr>
                 <td colspan="3">
-                    <input type="submit" value="Update">
-                    <input type="reset" value="Clear">
+                    <input type="submit" value="Update" class="form-control"><br>
+                    <input type="reset" value="Clear" class="form-control">
                 </td>
             </tr>
         </table>

@@ -15,17 +15,17 @@
             <tr>
                 <td>Kode Jurusan</td>
                 <td>:</td>
-                <td><input type="text" name="Kode_Jurusan" value="{{$jurusan->Kode_Jurusan}}"></td>
+                <td><input type="text" name="Kode_Jurusan" value="{{$jurusan->Kode_Jurusan}}" class="form-control"></td>
             </tr>
             <tr>
                 <td>Nama Jurusan</td>
                 <td>:</td>
-                <td><input type="text" name="Nama_Jurusan" value="{{$jurusan->Nama_Jurusan}}"></td>
+                <td><input type="text" name="Nama_Jurusan" value="{{$jurusan->Nama_Jurusan}}" class="form-control"></td>
             </tr>
             <tr>
                 <td colspan="3">
-                    <input type="submit" value="Update">
-                    <input type="reset" value="Clear">
+                    <input type="submit" value="Update" class="form-control"><br>
+                    <input type="reset" value="Clear" class="form-control">
                 </td>
             </tr>
         </table>

@@ -1,12 +1,11 @@
 Buatlah sebuah Migrasi, Model, Controller dan Form untuk Table berikut :
-1. Migrasi Table Kelas
-   Isi dari Table
+1. Migrasi Table Kelas   Isi dari Table
 	id()
 	string('kode_kelas')
 	unsignedBigInteger('kode_mata_kuliah')
 	unsignedBigInteger('kode_dosen')
 	enum('hari', ['senin', 'selasa', 'rabu', 'kamis', 'jumat'])
-	enum('jam', ['07:00 - 08:40', '08:50 - 11:30', '12:30 - 14:10', '17:00 - 18:40', '19:00 - 20:40'])
+	enum('jam', ['08:00 - 09:40', '09:50 - 11:30', '12:30 - 14:10', '17:00 - 18:40', '19:00 - 20:40'])
 	string('tahun_ajaran')
 	string('ruang_kelas')
 	integer('jumlah_max')

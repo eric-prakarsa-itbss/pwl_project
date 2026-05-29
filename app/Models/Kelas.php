@@ -21,17 +21,18 @@ class Kelas extends Model
         'semester'
     ];
 
-    public function ListHari(){
+    public static function ListHari(){
         return [
-            'senin',
-            'selasa',
-            'rabu',
-            'kamis',
-            'jumat'
+            'Senin',
+            'Selasa',
+            'Rabu',
+            'Kamis',
+            'Jumat',
+            'Sabtu'
         ];
     }
 
-    public function ListJam(){
+    public static function ListJam(){
         return [
             '08:00 - 09:40',
             '09:50 - 11:30',

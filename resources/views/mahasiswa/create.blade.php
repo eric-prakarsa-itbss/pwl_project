@@ -13,37 +13,37 @@
             <tr>
                 <td>Nama Lengkap</td>
                 <td>:</td>
-                <td><input type="text" name="Fullname"></td>
+                <td><input type="text" name="Fullname" class="form-control"></td>
             </tr>
             <tr>
                 <td>Nomor Induk Mahasiswa</td>
                 <td>:</td>
-                <td><input type="text" name="NIM"></td>
+                <td><input type="text" name="NIM" class="form-control"></td>
             </tr>
             <tr>
                 <td>Nomor Induk Siswa Nasional</td>
                 <td>:</td>
-                <td><input type="text" name="NIDN"></td>
+                <td><input type="text" name="NIDN" class="form-control"></td>
             </tr>
             <tr>
                 <td>Tempat Lahir</td>
                 <td>:</td>
-                <td><input type="text" name="Tempat_Lahir"></td>
+                <td><input type="text" name="Tempat_Lahir" class="form-control"></td>
             </tr>
             <tr>
                 <td>Tanggal Lahir</td>
                 <td>:</td>
-                <td><input type="text" name="Tanggal_Lahir"></td>
+                <td><input type="text" name="Tanggal_Lahir" class="form-control"></td>
             </tr>
             <tr>
                 <td>Alamat</td>
                 <td>:</td>
-                <td><textarea name="Alamat"></textarea></td>
+                <td><textarea name="Alamat" class="form-control"></textarea></td>
             </tr>
             <tr>
                 <td colspan="3">
-                    <input type="submit" value="Add">
-                    <input type="reset" value="Clear">
+                    <input type="submit" value="Add" class="form-control"><br>
+                    <input type="reset" value="Clear" class="form-control">
                 </td>
             </tr>
         </table>
