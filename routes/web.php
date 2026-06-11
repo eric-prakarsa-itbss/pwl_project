@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KRSController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\MataKuliahController;
@@ -16,6 +17,7 @@ Route::resource('/dosen', DosenController::class);
 Route::resource('/matakuliah', MataKuliahController::class);
 Route::resource('/jurusan', JurusanController::class);
 Route::resource('/kelas', KelasController::class);
+Route::resource('/krs', KRSController::class);
 
 
 
