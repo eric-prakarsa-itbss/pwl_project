@@ -15,7 +15,10 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('kode_mahasiswa');
             // Define foreign key constraint
-            $table->foreign('kode_mahasiswa')->references('id')->on('table_mahasiswa')->onDelete('cascade');
+            $table->foreign('kode_mahasiswa')
+            ->references('id')
+            ->on('table_mahasiswa')
+            ->onDelete('cascade');
 
             $table->string('tahun_ajaran');
             $table->enum('semester', ['ganjil', 'genap']);

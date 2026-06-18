@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
+    {{ $user }}
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <img src="https://112005.sgp1.vultrobjects.com/sikad/gambar/Logo.gA1qr7iMLX.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YGIP9T9E1N7J9K1U7NIC%2F20260514%2Fsgp1%2Fs3%2Faws4_request&X-Amz-Date=20260514T203745Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&x-id=GetObject&X-Amz-Signature=97c43795bdcaa209764f375d74ba8e93da28661f2c79cdeba4bb0f4b9ea321f6" style="width:40px; height:40px;">
@@ -21,6 +22,7 @@
             <!-- <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
             </li> -->
+            @if ($user->role != 'guest')
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Menu
@@ -33,6 +35,12 @@
                 <li><a class="dropdown-item" href="{{ action([App\Http\Controllers\MataKuliahController::class, 'index']) }}">Mata Kuliah</a></li>
               </ul>
             </li>
+            @endif
+            @if ($user->role == 'mahasiswa')
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="{{  action([App\Http\Controllers\KelasController::class, 'index']) }}">Kelas</a></li>
+            </li>
+            @endif
             <!-- <li class="nav-item">
               <a class="nav-link disabled" aria-disabled="true">Disabled</a>
             </li> -->

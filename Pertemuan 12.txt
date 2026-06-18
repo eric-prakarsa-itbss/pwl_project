@@ -8,7 +8,7 @@ Buatlah sebuah Migrasi, Model, Controller dan Form untuk Table berikut :
 	integer('total_sks')
 	timestamps()
 
-2. Migrasi Table krs_detail   Isi dari Table
+2. Migrasi Table krs_detail Isi dari Table
 	id()
 	unsignedBigInteger('krs_id')
 	unsignedBigInteger('kelas_id')
@@ -17,5 +17,5 @@ Buatlah sebuah Migrasi, Model, Controller dan Form untuk Table berikut :
 	
 2. Model dan Controller untuk Tabel di atas
 3. Form create
-4. Halaman index
+4. Halaman index & Halaman View / Detail
 5. TIDAK PERLU MEMBUAT FORM EDIT
